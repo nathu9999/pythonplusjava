@@ -24,6 +24,50 @@ public class HelloControllerTest {
 	public void getHello() throws Exception {
 		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
 				.andExpect(status().isOk())
+				.andExpect(content().strin@SpringBootTest
+@AutoConfigureMockMvc
+public class HelloControllerTest {
+
+	@Autowired
+	private MockMvc mvc;
+
+	@Test
+	public void getHello() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().strin@SpringBootTest
+@AutoConfigureMockMvc
+public class HelloControllerTest {
+
+	@Autowired
+	private MockMvc mvc;
+
+	@Test
+	public void getHello() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().strin@SpringBootTest
+@AutoConfigureMockMvc
+public class HelloControllerTest {
+
+	@Autowired
+	private MockMvc mvc;
+
+	@Test
+	public void getHello() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
+				.andExpect(content().strin@SpringBootTest
+@AutoConfigureMockMvc
+public class HelloControllerTest {
+
+	@Autowired
+	private MockMvc mvc;
+
+	@Test
+	public void getHello() throws Exception {
+		mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON))
+				.andExpect(status().isOk())
 				.andExpect(content().string(equalTo("Greetings from Spring Boot!")));
 		
 		for(int i=0;i<9;i++)
