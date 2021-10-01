@@ -1,17 +1,14 @@
-#!/bin/sh
-cd $(dirname $0)
-
-cd ../complete
-
-./mvnw clean package
-ret=$?
+#!/bin/sh 
+cd $(dirname $0)  
+cd ../complete  
+./mvnw clean package  
+ret=$?  
 if [ $ret -ne 0 ]; then
-exit $
+exit $  
 if [ $ret -ne 0 ]; then
 exit $ret
-fi
+fi  
 rm -rf target
-
 ./gradlew build
 ret=$?
 if [ $ret -ne 0 ]; then
@@ -21,7 +18,6 @@ rm -rf buildif [ $ret -ne 0 ]; then
 exit $ret
 fi
 rm -rf target
-
 ./gradlew build
 ret=$?
 if [ $ret -ne 0 ]; then
@@ -30,40 +26,35 @@ fi
 rm -rf buildret
 fi
 rm -rf target
-
 ./gradlew build
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
-fi
+fi  
 rm -rf build
-
-cd ../initial
-
+cd ../initial 
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
-fi
-
-exit $ret
+fi  
+exit $ret 
 fi
 rm -rf targetret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
-fi
-rm -rf targetret=$?
+fi  
+rm -rf targetret=$? 
 if [ $ret -ne 0 ]; then
 exit $ret
 fi
 rm -rf target
 if [ $ret -ne 0 ]; then
-exit $ret
-fi
-rm -rf build
+exit $ret 
+fi  
+rm -rf build  
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
-fi
+fi  
 rm -rf target
-
 exit
