@@ -40,35 +40,30 @@ rm -rf build
 
 cd ../initial
 
+ret=$?
+if [ $ret -ne 0 ]; then
+exit $ret
+fi
 
+exit $ret
+fi
+rm -rf targetret=$?
+if [ $ret -ne 0 ]; then
+exit $ret
+fi
+rm -rf targetret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
 fi
 rm -rf target
-tag(){}
-ret=$?
 if [ $ret -ne 0 ]; then
-exit $retcd ../initial
-
-./gradlew build
-ret=$?
-
 exit $ret
 fi
 rm -rf build
-
-./mvnw clean compile
 ret=$?
 if [ $ret -ne 0 ]; then
 exit $ret
 fi
 rm -rf target
-
-./gradlew compileJava
-ret=$?
-if [ $ret -ne 0 ]; then
-exit $ret
-fi
-rm -rf build
 
 exit
