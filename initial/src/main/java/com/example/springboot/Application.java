@@ -19,6 +19,11 @@ public class Application {
 		for (String beanName : beanNames) {
 			System.out.println(beanName);
 		}
+		
+		@PostMapping("/")
+	public String index() {
+		return "Greetings from Spring Boot!";
+	}
 	}
 	
 }
